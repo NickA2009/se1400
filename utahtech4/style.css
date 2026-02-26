@@ -2,9 +2,6 @@
 box-sizing: border-box;
 }
 
-body {
-   margin: 0;
-}
 
 /* Global styles */
   body {
@@ -15,12 +12,9 @@ body {
 
 /* Wrapper */
 #wrapper {
-   display: grid;
-   grid-auto-rows: minmax(0px, auto);
-   grid-template-columns: 
-      minmax(0px, 1fr)
-      repeat(6, minmax(0, 175px))
-      minmax(0px, 1fr);
+  display: grid;
+  grid-auto-rows: minmax(0, auto);
+  grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
 }
 
 /* Header styles */
@@ -29,12 +23,7 @@ header {
   color: #FFFFFF;
   font-family: Georgia, serif;
   grid-row: 1 / 2;
-  grid-column: 2 / 8;
-}
-
-header a {
-   text-decoration: none;
-   color: #FFFFFF;
+  grid-column: 2 / -2;
 }
 
 /* Header h1 descendant selector */
@@ -44,50 +33,20 @@ header h1 {
   background-position: right;
   background-origin: content-box;
   padding-left: 1em;
-  margin: 0;
+  margin-bottom: 0;
   padding:.2em;
 }
 
 /* Navigation styles */
 nav {
-   grid-row: 2 / 3;
-   grid-column: 2 / 8;
-   background-color: #424242;
-   margin: 0;
-   padding: 0;
-   position: sticky;
-   top: 0;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  grid-row: 2 / 3;
+  grid-column: 2 / -2;
 }
-
-nav ul {
-   margin: 0;
-   padding: 0;
-   display: flex;
-   flex-flow: row nowrap;
-   list-style-type: none;
-}
-
-nav ul li {
-   width: 100%;
-}
-
-#homehero,
-#studenthero,
-#facultyhero {
-   grid-row: 3 / 4;
-   grid-column: 2 / 8;
-}
+#homehero, #studenther, #facultyhero
 
 nav a {
-   color: #FFFFFF;
-   padding: 1rem 0rem;
-   display: block;
-   text-align: center;
-   text-decoration: none;
-}
-
-nav a:hover {
-   background-color: #BA1C21;
+  text-decoration: none;
 }
 
 /* Heading level 2 */
@@ -101,14 +60,8 @@ h3 {
 }
 
 main {
-   grid-row: 4 / 5;
-   grid-column: 2 / 8;
-   background-color: #ffffff;
-}
-
-main img {
-   float: right;
-   padding-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #homehero {
@@ -149,6 +102,5 @@ dt {
 
 /* Footer styles */
 footer {
-   grid-row: 5 / 6;
-   grid-column: 2 / 8;
+  padding: 1rem;
 }
